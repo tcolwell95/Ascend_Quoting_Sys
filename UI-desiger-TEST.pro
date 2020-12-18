@@ -11,17 +11,15 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    material_screen.cpp \
     second_window.cpp
 
 HEADERS += \
+    Quote.h \
     mainwindow.h \
-    material_screen.h \
     second_window.h
 
 FORMS += \
     mainwindow.ui \
-    material_screen.ui \
     second_window.ui
 
 # Default rules for deployment.

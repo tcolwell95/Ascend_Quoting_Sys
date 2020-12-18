@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Second_window</class>
  <widget class="QDialog" name="Second_window">
@@ -5,13 +6,23 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>600</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>141</y>
+     <width>591</width>
+     <height>451</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
