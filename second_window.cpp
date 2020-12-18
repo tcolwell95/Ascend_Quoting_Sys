@@ -12,17 +12,19 @@ Second_window::Second_window(QWidget *parent) :
     ui->setupUi(this);
 
     list<Quote>::iterator it;
-    list<Quote> newlist;
 
 
 
-    //for (it = secondList->begin(); it != secondList->end(); it++){
-      //  QString str = "Hello";
-        //        ui->listWidget->addItem(str);
+    for (it = newlist.begin(); it != newlist.end(); it++){
+
+        for(int i = 0; i < 5; i++){
+             QString str = it->getAll(i);
+         ui->listWidget->addItem(str);
+        }
 
 }
 
-
+}
 
 Second_window::~Second_window()
 {

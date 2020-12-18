@@ -4,6 +4,7 @@
 #include <sstream>
 #include <iostream>
 #include <iomanip>
+#include <QString>
 using namespace std;
 
 class Quote
@@ -31,6 +32,27 @@ public:
 	{
 		return pitchNumerator;
 	}
+
+    QString getAll(int i){
+        QString extra_pay;
+        if(PremiumFeature==true){
+           extra_pay = "20";
+        }
+        else extra_pay = "0";
+
+
+        if (i == 0)
+        return ("Materials: $100" );
+         if (i == 1)
+       return ("Labor: $" + QString::number(labor));
+          if (i == 2)
+      return "Pitch Factor: $" + QString::number(getPitchFactor());
+           if (i == 3)
+      return "Premium Materials: $" + extra_pay;
+            if (i == 4)
+      return "Section total: " + QString::number(calculateQuoteSections());;
+
+    }
 
 	void setPitchNumerator(int pitchNumerator)
 	{
@@ -94,6 +116,7 @@ public:
         double total = 0;
 
         double markup_factor = 1.0 + (double)markUp /100.0;
+
         double pricePerSquare = 100 + labor;
 
         if (PremiumFeature == true) {

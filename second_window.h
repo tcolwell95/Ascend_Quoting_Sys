@@ -14,10 +14,13 @@ class Second_window : public QDialog
 public:
     explicit Second_window(QWidget *parent = nullptr);
     ~Second_window();
+    void setlist(list<Quote> it){
+       newlist = it;
+    }
 
 private:
     Ui::Second_window *ui;
-
+    list<Quote> newlist;
 };
 
 #endif // SECOND_WINDOW_H
